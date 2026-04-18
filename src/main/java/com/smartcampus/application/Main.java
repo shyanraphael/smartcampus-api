@@ -8,15 +8,9 @@ import org.glassfish.jersey.jackson.JacksonFeature;
 import java.io.IOException;
 import java.net.URI;
 
-/**
-    Main is the application entry point.
-    It starts an embedded Grizzly HTTP server - no Tomcat or external server needed!
-    
-    HOW IT WORKS:
-        1. We create a ResourceConfig (tells Jersey where to find our resource classes)
-        2. We start a Grizzly HTTP server on port 8080
-        3. Jersey handles all incoming requests and routes them to the right resource class
- */
+//Main is the application entry point.
+//It starts an embedded Grizzly HTTP server - no Tomcat or external server needed
+
 public class Main {
 
     // The base URL the server will listen to
