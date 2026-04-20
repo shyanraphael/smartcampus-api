@@ -24,7 +24,7 @@ API Overview and Design
 		Build Tool - Apache Maven
 		Storage - ConcurrentHashMap
 
-Step-by-step build and run instructions
+Step by step build and run instructions
 	Requirements
 		Java JDK 11 or higher - download from https://adoptium.net
 		Apache Maven 3.6+ — download from https://maven.apache.org/download.cgi
