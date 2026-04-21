@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
-/**
+/*
     DataStore is a singleton class that acts as our in-memory database
     As we cannot use a real database, we store everything in HashMaps
 
