@@ -2,9 +2,9 @@ package com.smartcampus.model;
 
 import java.util.UUID;
 
-/**
- * SensorReading represents a single historical data point recorded by a Sensor.
- * Every time a sensor captures a measurement, a new SensorReading is created.
+/*
+ SensorReading represents a single historical data point recorded by a Sensor.
+ Every time a sensor captures a measurement, a new SensorReading is created.
  */
 public class SensorReading {
 
@@ -12,13 +12,15 @@ public class SensorReading {
     private long timestamp;    // When the reading was taken (milliseconds since epoch)
     private double value;      // The actual measured value
 
-    // --- Constructors ---
+    //Constructors
 
     public SensorReading() {}
 
     public SensorReading(double value) {
-        this.id = UUID.randomUUID().toString();   // Auto-generate a unique ID
-        this.timestamp = System.currentTimeMillis(); // Capture current time
+        // Auto-generate a unique ID
+        this.id = UUID.randomUUID().toString();   
+        // Capture current time
+        this.timestamp = System.currentTimeMillis(); 
         this.value = value;
     }
 
@@ -28,7 +30,7 @@ public class SensorReading {
         this.value = value;
     }
 
-    // --- Getters and Setters ---
+    //Getters and Setters
 
     public String getId() { return id; }
     public void setId(String id) { this.id = id; }
