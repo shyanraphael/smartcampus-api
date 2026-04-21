@@ -7,7 +7,7 @@ import jakarta.ws.rs.ext.Provider;
 import java.util.HashMap;
 import java.util.Map;
 
-/**
+/*
     Maps RoomNotEmptyException through the HTTP 409 which results in a Conflict response
 
     Triggered when 'DELETE /api/v1/rooms/{roomId}' is called on a room that still has sensors assigned to it
