@@ -8,10 +8,10 @@ import java.util.HashMap;
 import java.util.Map;
 
 @Provider
-public class RuntimeExceptionMapper implements ExceptionMapper<RuntimeException> {
+public class GlobalExceptionMapper implements ExceptionMapper<Throwable> {
 
     @Override
-    public Response toResponse(RuntimeException exception) {
+    public Response toResponse(Throwable exception) {
         //Only developers see this
         // Log full details server-side for debugging
         System.err.println("[GLOBAL ERROR HANDLER] Caught unexpected exception:");
@@ -25,8 +25,10 @@ public class RuntimeExceptionMapper implements ExceptionMapper<RuntimeException>
         error.put("error", "Internal Server Error");
         error.put("message", "An unexpected error occurred on the server. Please contact the system administrator.");
 
-        return Response.status(500)
-                .entity("RAW 500 ERROR: " + exception.getMessage())
-                .build();
+        return Response
+            .status(Response.Status.INTERNAL_SERVER_ERROR)
+            .entity(error)
+            .type(MediaType.APPLICATION_JSON)
+            .build();
     }
 }
